@@ -5,24 +5,26 @@ const Login: React.FC = () => {
   const doLogin = () => {
     navigation.push('/app', 'forward', 'replace');
   }
+
   return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
+  <IonPage>
+      <IonHeader>
+      <IonToolbar>
             <IonTitle>Login</IonTitle>
           </IonToolbar>
         </IonHeader>
-  
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Login</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-  
-        </IonContent>
+
+      <IonContent className="ion-padding">
+
+       <IonButton expand="full" onClick={()=> doLogin()}>
+       Login
+    </IonButton>
+
+     </IonContent>
       </IonPage>
-    );
-  };
-  
-  export default Home;
+
+
+  );
+};
+
+export default Login;
