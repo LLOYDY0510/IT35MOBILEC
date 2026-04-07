@@ -1,37 +1,26 @@
-import {IonButton,IonContent,IonHeader,IonIcon,IonPage,IonTitle,IonToolbar,} from '@ionic/react';
-import { heart } from 'ionicons/icons';
+import {  IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
+import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Home</IonTitle>
+          
+          <IonTitle>blank</IonTitle>
         </IonToolbar>
       </IonHeader>
 
-      <IonContent fullscreen>
+      <IonContent fullscreen className="ion-padding">
+
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Home</IonTitle>
+            <IonTitle size="large">Dashboard</IonTitle>
           </IonToolbar>
         </IonHeader>
 
-      
-        <div className="ion-padding">
-          <IonButton>Default</IonButton>
-
-          <IonButton shape="round">Round</IonButton>
-
-          <IonButton>
-            <IonIcon slot="icon-only" icon={heart} />
-          </IonButton>
-
-          <IonButton shape="round">
-            <IonIcon slot="icon-only" icon={heart} />
-          </IonButton>
-        </div>
-
+        <ExploreContainer />
       </IonContent>
     </IonPage>
   );
