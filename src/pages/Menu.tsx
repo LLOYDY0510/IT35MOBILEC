@@ -5,6 +5,7 @@ import { homeOutline, information, logOutOutline, settingsOutline } from 'ionico
 import Home from './Home';
 import Page1 from './Page1';
 import Page2 from './page2';
+import { supabase } from '../lib/supabaseclient';
 
 const Menu: React.FC = () => {
 
@@ -13,6 +14,9 @@ const Menu: React.FC = () => {
     { name: 'Page 1', url: '/app/page1', icon: information },
     { name: 'Page 2', url: '/app/page2', icon: settingsOutline },
   ];
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+  };
 
   return (
     <IonPage>
